@@ -9,7 +9,7 @@ phases:
       - node -v
       - npm -v
       - echo Installing frontend dependencies...
-      - cd frontend
+      - cd last-and-found-frontend
       - npm install
 
   build:
