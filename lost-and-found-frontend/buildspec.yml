@@ -2,11 +2,14 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
     commands:
-      - echo Installing dependencies...
-      - cd lost-and-found-frontend
+      - echo Installing Node.js 20...
+      - curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+      - apt-get install -y nodejs
+      - node -v
+      - npm -v
+      - echo Installing frontend dependencies...
+      - cd frontend
       - npm install
 
   build:
